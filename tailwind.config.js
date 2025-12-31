@@ -18,7 +18,8 @@ module.exports = {
         black: "#0C0F12",
         // primary: "#30434E",
         primary: "#245AEC",
-        secondary: "#0F1D30",
+        secondary: "#d8953f",
+        aorange:"#d8953f",
         brightgray: "#EAEEE9",
         richblack: "#051118",
       },
@@ -103,8 +104,8 @@ module.exports = {
       },
 
       fontFamily: {
-        "Plus-Jakarta-Sans": "Plus Jakarta Sans, sans-serif",
-        manrope: "Manrope, sans-serif",
+        libre: "Libre Baskerville, serif",
+        poppins: "Poppins, sans-serif",
       },
       animation: {
         marquee: "marqueeanim 30s normal linear infinite",
