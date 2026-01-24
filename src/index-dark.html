@@ -1,174 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Business Gita</title>
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  <!-- Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Tailwind Config -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['Georgia', 'serif'],
-            sans: ['Inter', 'sans-serif']
-          },
-          colors: {
-            primary: '#D68C3A',
-            bg: '#F7EFE8',
-            text: '#2B2B2B'
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<style>
+  /* container */
+  .side-tabs {
+    position: fixed;
+    /* change to relative if needed */
+    right: 0;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 999;
+  }
 
-<body class="bg-bg text-text font-serif">
+  /* individual tab */
+  .tab {
+    position: relative;
+    width: 60px;
+    height: 70px;
+    cursor: pointer;
+  }
 
-<!-- ================= NAVBAR ================= -->
-<header class="w-[1200px] mx-auto flex justify-between items-center py-[24px]">
-  <div class="text-[20px] font-semibold">Business Gita</div>
-  <nav class="flex items-center gap-[32px] text-[14px]">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Buy</a>
-    <button class="bg-primary text-white px-[18px] py-[8px] rounded-[20px] flex items-center gap-[6px]">
-      Buy on Amazon India
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-[12px] h-[12px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
-  </nav>
-</header>
+  .tab-bar {
+    width: 3px;
+    border: 1px solid white;
+  }
 
-<!-- ================= HERO ================= -->
-<section class="w-[1200px] mx-auto grid grid-cols-2 gap-[80px] items-center mt-[40px] pt-[60px] pb-[80px] border-b border-black/10">
-  <div>
-    <h1 class="xl:text-[62px] lg:text-[52px] leading-[60px] mb-[16px] font-bold">Business Gita</h1>
-    <p class="text-[24px] italic mb-[24px]">
-      Ancient clarity. Modern leadership.
-    </p>
+  /* vertical white bands */
+  /* .tab::before,
+.tab::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  width: 2px;
+  height: 100%;
+  background: #eaeaea;
+} */
 
-    <p class="text-[18px] leading-[28px] mb-[24px] w-[480px]">
-      Short, timeless conversations inspired by the Bhagavad Gita.
-      A book for entrepreneurs, leaders, and professionals to think
-      better, decide clearer, and lead wiser.
-    </p>
+  .tab::after {
+    right: 16px;
+  }
 
-    <button class="bg-primary text-white px-[36px] py-[12px] rounded-[24px] text-[18px] flex items-center gap-[20px] mt-[30px]">
-      Buy on Amazon India
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-[14px] h-[14px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
+  /* title panel */
+  .tab span {
+    position: absolute;
+    right: 63px;
+    top: 0;
+    height: 100%;
+    padding: 0 22px;
+    background: #1f3346;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 
-    <p class="text-[18px] font-medium mt-[26px] opacity-70">
-      Hardcover  |  50 Conversations  |  50 Lessons
-    </p>
-  </div>
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
 
-  <div>
-    <img src="./img/1.jpeg" alt="Book" class="w-[480px] rounded-lg" />
-  </div>
-</section>
+    /* hidden */
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
 
-<div class="w-[1200px] mx-auto  my-[140px]"></div>
+    transition: all 0.25s ease;
+  }
 
-<!-- ================= WHAT IS ================= -->
-<section class="w-[1200px] mx-auto grid grid-cols-2 gap-[80px] items-center">
-  <div>
-    <h2 class="text-[40px] mb-[20px]">What is Business Gita?</h2>
-    <p class="text-[18px] mb-[16px]">
-      Business Gita is not a book you “finish.”
-      It’s a book you return to.
-    </p>
+  /* hover reveal */
+  .tab:hover span {
+    opacity: 1;
+    transform: translateX(0);
+  }
+</style>
 
-    <p class="text-[18px] leading-[32px] w-[480px]">
-      Written by Dr. Ajayya Kumar, Business Gita distills timeless
-      wisdom into modern leadership insights through short,
-      real-world conversations. Each chapter is a dialogue —
-      between uncertainty and clarity, ambition and balance,
-      action and reflection.
-    </p>
-
-    <div class="flex gap-[24px] mt-[24px] text-[18px] opacity-80">
-      <span>No jargon</span> |
-      <span>Practical</span> |
-      <span>Revisited Often</span> 
+<body style="background-color: #000000;">
+  <div class="side-tabs">
+    <div class="tab-bar">
+      <div class="tab"><span>About</span></div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span>Careers</span></div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span>Testimonials</span></div>
+    </div>
+    <div class="tab-bar">
+      <div class="tab"><span>Products</span></div>
     </div>
   </div>
-
-  <div>
-    <img src="./img/2.jpeg" alt="Book" class="w-[480px] rounded-lg" />
-  </div>
-</section>
-
-<!-- ================= WHY EXISTS ================= -->
-<section class="w-[1200px] mx-auto grid grid-cols-2 gap-[80px] mt-[180px] mb-[160px] items-center">
-  <div>
-    <h2 class="text-[40px] mb-[20px]">Why this book exists</h2>
-
-    <ul class="space-y-[20px] text-[18px]">
-      <li class="flex items-start gap-[12px]">
-        <span class="w-[22px] h-[22px] bg-primary text-white rounded-full flex items-center justify-center text-[12px] mt-[2px] shadow-[0_2px_6px_rgba(0,0,0,0.15)]">✓</span>
-        <span>Better decisions, without second-guessing</span>
-      </li>
-
-      <li class="flex items-start gap-[12px]">
-        <span class="w-[22px] h-[22px] bg-primary text-white rounded-full flex items-center justify-center text-[12px] mt-[2px] shadow-[0_2px_6px_rgba(0,0,0,0.15)]">✓</span>
-        <span>Leadership clarity, without force or control</span>
-      </li>
-
-      <li class="flex items-start gap-[12px]">
-        <span class="w-[22px] h-[22px] bg-primary text-white rounded-full flex items-center justify-center text-[12px] mt-[2px] shadow-[0_2px_6px_rgba(0,0,0,0.15)]">✓</span>
-        <span>Long-term thinking, even in uncertainty</span>
-      </li>
-
-      <li class="flex items-start gap-[12px]">
-        <span class="w-[22px] h-[22px] bg-primary text-white rounded-full flex items-center justify-center text-[12px] mt-[2px] shadow-[0_2px_6px_rgba(0,0,0,0.15)]">✓</span>
-        <span>Wisdom you can apply, immediately</span>
-      </li>
-    </ul>
-
-    <p class="text-[18px] mt-[24px] opacity-80">
-      Each lesson is short  |  Each insight stays with you
-    </p>
-  </div>
-
-  <div>
-    <img src="./img/3.jpeg" alt="Book" class="max-w-[480px] rounded-lg" />
-  </div>
-</section>
-
-<!-- ================= AUTHOR & TESTIMONIALS ================= -->
-<section class="w-[1200px] mx-auto grid grid-cols-2 items-center gap-[80px] mt-[100px] mb-[120px]">
-
-  <div class="flex gap-[24px] items-center justify-center">
-    <img src="https://beingajay.com/wp-content/uploads/2023/10/download-768x432.jpeg" class="w-[360px] rounded-[12px]" />
-    <!-- <div>
-      <h3 class="text-[22px] mb-[6px]">About the Author</h3>
-      <p class="text-[16px] font-semibold">Dr. Ajayya Kumar</p>
-      <p class="text-[14px] opacity-80 w-[320px]">
-        An experienced leader and thinker, blending ancient wisdom
-        with modern business clarity.
-      </p>
-    </div> -->
-  </div>
-
-  <div>
-    <h3 class="text-[36px] mb-[16px]">What readers are saying</h3>
-    <div class="space-y-[14px] text-[18px] italic opacity-90">
-      <p>“A refreshing perspective on leadership — concise, thoughtful and deeply relevant.”</p>
-      <p>“This is the kind of book you keep on your desk, not your shelf.”</p>
-      <p>“Simple conversations that quietly change the way you think.”</p>
-    </div>
-  </div>
-
-</section>
 
 </body>
+
 </html>
