@@ -109,7 +109,7 @@
   /* Bottom navigation container */
   .hero-nav {
     position: absolute;
-    bottom: 50px;
+    bottom: 36px;
     left: 20px;
     display: flex;
     gap: 40px;
@@ -306,6 +306,140 @@
     background: #442c22;
     opacity: 1;
   }
+
+  .testimonial-card{
+        position: relative;
+        width: fit-content;
+      }
+      .testimonial-box {
+  position: relative;
+  /* width: 460px; */
+  background: #f8e3ca;
+  border: 2px solid #6a3f1a;
+  border-radius: 22px;
+  padding: 32px 32px 28px;
+  color: #6b3f1b;
+  /* font-family: "Georgia", serif; */
+}
+
+/* speech bubble tail (border) */
+.testimonial-box::before {
+  content: '';
+  position: absolute;
+  bottom: -24px;
+  left: 48px;
+  /* height: 10px; */
+  padding: 0px;
+  width: 0;
+  height: 0;
+  border-top: 22px solid #643e19;
+  border-left: 55px solid transparent;
+  border-right: 0 solid transparent;
+}
+
+/* speech bubble tail (fill) */
+.testimonial-box::after {
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  left: 49px;
+  width: 0;
+  height: 0;
+  border-top: 21px solid #f2e2c8;
+  border-left: 52px solid transparent;
+  border-right: 0 solid transparent;
+}
+
+.testimonial-author {
+  position: absolute;
+  margin-top: 10px;
+    white-space: normal;
+    left: 30%;
+    right: 0;
+    height: 60px;
+}
+
+.testimonial-author strong {
+  display: block;
+  color: #643e19;
+}
+
+.testimonial-author span {
+  color: #643e19;
+}
+
+
+
+   .t-slider {
+    position: relative;
+    width: 100%;
+  }
+
+  .t-slider .swiper {
+    padding-bottom: 40px;
+  }
+
+  .t-slider .swiper-slide {
+    overflow: hidden;
+    height: 250px;
+  }
+
+  @media (min-width: 768px) {
+
+    .t-slider .swiper-button-prev,
+    .t-slider .swiper-button-next {
+      width: 36px;
+      height: 36px;
+      background: white;
+      color: black;
+      border-radius: 50%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .t-slider .swiper-button-prev::after,
+    .t-slider .swiper-button-next::after {
+      font-size: 16px !important;
+    }
+
+    .t-slider .swiper-button-prev .swiper-navigation-icon,
+    .t-slider .swiper-button-next .swiper-navigation-icon {
+      height: 90%;
+      width: 90%;
+    }
+  }
+
+  .t-slider .swiper-button-prev::after,
+    .t-slider .swiper-button-next::after {
+      font-size: 16px !important;
+    }
+
+  .t-slider .swiper-button-prev,
+  .t-slider .swiper-button-next {
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .t-slider .swiper-button-prev .swiper-navigation-icon,
+  .t-slider .swiper-button-next .swiper-navigation-icon {
+    height: 50%;
+    width: 50%;
+  }
+
+  .t-slider .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #999;
+    opacity: 0.5;
+  }
+
+  .t-slider .swiper-pagination-bullet-active {
+    background: #442c22;
+    opacity: 1;
+  }
 </style>
 
 <body>
@@ -370,7 +504,7 @@
     <section class="hero-slider relative overflow-hidden">
       <div class="swiper heroSwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide relative hidden md:block">
+          <!-- <div class="swiper-slide relative hidden md:block">
              <video
               id="heroVideo"
               src="img/hero-vidoe.mp4" autoplay
@@ -379,7 +513,7 @@
               loop
               
             ></video>
-          </div>
+          </div> -->
           <div class="swiper-slide relative">
             <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
               <div class="overlay"></div>
@@ -390,19 +524,16 @@
               <div class="flex lg:flex-row flex-col items-center">
                 <div class="w-full lg:w-1/2">
                   <h1
-                    class="max-w-[610px] text-[32px] lg:text-[60px] font-libre font-bold tracking-[-0.6px] leading-[1.1] text-white md:mb-[6px] mb-2">
+                    class="max-w-[610px] text-[30px] lg:text-[60px] font-libre font-bold tracking-[-0.6px] leading-[1.1] text-white md:mb-[6px] mb-2">
                     Business Gita
                   </h1>
-                  <p class="text-[24px] md:text-[30px] font-libre font-medium tracking-[0.8px] text-white mb-2">
-                    Ancient clarity. <br> Modern leadership.
+                  <p class="text-[22px] md:text-[30px] font-libre font-medium tracking-[0.8px] leading-[1.25] text-white mb-2">
+                    Clarity for Life. <br> Insight for Leadership.
                   </p>
                   <p class="text-white/80 max-w-[555px] text-16 md:text-18 mb-[12px]">
-                    Short, thoughtful conversations to help leaders navigate decisions, pressure, and growth with calm confidence.
+                    Your guide to thoughtful action, calm choices, and meaningful growth - whether you lead a team, build a business, or navigate life’s challenges.
                   </p>
-                  <p class="text-white/80 max-w-[545px] text-16 md:text-18 mb-1">
-                    Inspired by the conversational wisdom of the Bhagavad Gita, written for modern business realities.
-                  </p>
-
+                 
                   <div class="md:w-fit mt-3 relative">
                     <a href="#!"
                       class="button relative py-[12px] md:py-[18px] px-[40px] lg:px-[32px] w-full bg-aorange inline-block text-black font-semibold text-16 leading-none">
@@ -411,9 +542,8 @@
                       </p>
                     </a>
                   </div>
-                  <p class="text-[15px] md:text-[18px] text-white/80 mt-[20px] md:mt-[28px]">
-                    Hardcover &nbsp;|&nbsp; 50 Conversations &nbsp;|&nbsp; 50
-                    Lessons
+                  <p class="text-[15px] md:text-[18px] text-white mt-[20px] md:mt-[28px]">
+                    50 Conversations &nbsp;|&nbsp; 50 Lessons &nbsp;|&nbsp; Timeless insight
                   </p>
                 </div>
                 <div class="w-full lg:w-1/2">
@@ -476,28 +606,30 @@
             <div class="container relative pt-[100px] pb-6 lg:pb-[160px] lg:pt-[180px]">
               <div class="flex lg:flex-row flex-col items-center">
                 <div class="w-full lg:w-1/2">
-                  <p class="text-[20px] md:text-[30px] font-libre font-medium tracking-[0.8px] text-white mb-2">
-                    For founders & leaders
-                  </p>
-                  <h1
+                  <h2 class="text-[22px] md:text-[30px] font-libre font-semibold tracking-[0.5] leading-[1.25] text-white mb-2">
+                    For Every Leader, <br> Thinker, and Curious Mind
+                  </h2>
+                  <!-- <h1
                     class="max-w-[610px] text-[28px] lg:text-[60px] font-libre font-bold tracking-[-0.6px] leading-[1.1] text-white mb-2">
                     When everything is urgent, clarity wins.
-                  </h1>
+                  </h1> -->
 
-                  <p class="text-white/80 max-w-[555px] text-16 md:text-[20px] mt-3 mb-[12px]">
-                    Not more advice. <br>
-                    Just calmer decisions under pressure.
+                  <p class="text-white/80 max-w-[555px] text-16 md:text-[20px] mt-3 mb-2">
+                   Not just another leadership book — a companion for anyone who wants clearer decisions, deeper insight, and strength in action.
                   </p>
+                   <h2 class="text-[22px] md:text-[30px] font-libre font-semibold tracking-[0.5px] leading-[1.25] text-white mb-2">
+                   When everything feels urgent, <br class="hidden md:block"> clarity wins.
+                  </h2>
                   <div class="md:w-fit mt-4 relative">
                     <a href="#!"
                       class="button py-[14px] md:py-2 px-[40px] lg:px-[32px] w-full bg-aorange inline-block text-black font-semibold text-16 leading-none">
-                      <p class="mb-0 flex items-center">What you’ll gain →</p>
+                      <p class="mb-0 flex items-center">Buy the Book →</p>
                     </a>
                   </div>
-                  <p class="text-[15px] md:text-[18px] text-white/80 mt-[28px]">
+                  <!-- <p class="text-[15px] md:text-[18px] text-white/80 mt-[28px]">
                     Hardcover &nbsp;|&nbsp; 50 Conversations &nbsp;|&nbsp; 50
                     Lessons
-                  </p>
+                  </p> -->
                 </div>
                 <div class="w-full lg:w-1/2">
                   <div class="md:max-w-[520px] lg:ml-auto">
@@ -571,43 +703,55 @@
         </div>
       </div>
     </section> -->
-    <section class="relative">
+    <section class="relative bg-[#f8e3ca]">
       <div class="grid md:grid-cols-2 items-center relative">
         <div class="relative py-[60px] md:py-[80px] order-1 md:order-0">
           <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full overflow-hidden">
             <div class="overlay"></div>
             <img class="h-full w-full" src="img/crop-back.webp" alt="" />
           </div>
-          <div class="relative px-2 md:pl-[80px]">
-            <h2 class="text-white text-[28px] md:text-[40px] mb-[30px]">
-              What is Business Gita?
+          <div class="relative px-2 md:pl-[80px] md:pr-[32px]">
+            <h2 class="text-white text-[24px] md:text-[36px] leading-[1.25] mb-[30px]">
+              Business Gita - <br>
+              <i>A Book for Everyone</i> 
             </h2>
             <p class="text-white text-16 md:text-[18px] mb-[16px]">
-              Business Gita is not a book you “finish.” <br />
-              It’s a book you return to.
+              Business Gita brings timeless insight into practical, conversational wisdom that resonates with everyday life, work, and leadership.
+              This isn’t just another business book — it’s a companion for anyone who wants clarity in thought, confidence in decision-making, and strength in action. 
+              Whether you’re a leader at work, a creator charting your path, or a thinker seeking depth in everyday choices, this book meets you where you are.
             </p>
 
-            <p class="text-white text-16 md:text-[18px] leading-[32px] max-w-[480px]">
-              Written by Dr. Ajayya Kumar, Business Gita distills timeless
-              wisdom into modern leadership insights through short, real-world
-              conversations.
+            <p class="text-white text-16 md:text-[18px] md:w-[480px]">
+              Here’s what you’ll discover inside:
             </p>
 
-            <p class="text-white text-16 md:text-[18px] leading-[32px] max-w-[480px]">
-              Each chapter is a dialogue between uncertainty and clarity,
-              ambition and balance, action and reflection.
+            <ul class="list-check !md:text-[18px] font-poppins">
+              <li class="text-white text-16 !md:text-[18px]">
+                <b>50 Conversations</b> rooted in real-world insight
+              </li>
+              <li class="text-white text-16 !md:text-[18px]">
+                <b>50 Lessons</b> designed for reflection and action
+              </li>
+              <li class="text-white text-16 !md:text-[18px]">
+                Practical clarity for complex decisions
+              </li>
+              <li class="text-white text-16 !md:text-[18px]">
+                Everyday wisdom that’s easy to apply
+              </li>
+            </ul>
+            <p class="text-white text-16 md:text-[18px] mb-0">
+              Every page invites reflection - not just understanding - helping you think better, decide better, and act with purpose.
             </p>
-
-            <div class="text-white flex gap-[24px] mt-2 md:mt-[24px] text-16 md:text-[18px] opacity-80">
-              No jargon&nbsp; | &nbsp;Practical&nbsp; | &nbsp;Revisited Often
-            </div>
           </div>
         </div>
-        <div class="relative order-0 md:order-1 h-[300px] md:min-h-full">
+        <div class="order-0 md:order-1">
+            <img class="h-full w-[90%] mx-auto object-cover object-center rounded" src="img/1.jpeg" alt="" />
+        </div>
+        <!-- <div class="relative order-0 md:order-1 h-[300px] md:min-h-full">
           <div class="absolute w-full h-full">
             <img class="h-full w-full object-cover object-center" src="img/1.jpeg" alt="" />
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -753,6 +897,77 @@
             <img src="img/t-2.webp" class="w-[100%] mx-auto" alt="" />
           </div>
         </div>
+      </div>
+    </section>
+
+     <section class="md:pt-[160px] pb-[60px] md:pb-[80px] bg-[#f8e3ca]">
+      <div class="container">
+        <h1 class="text-center text-[30px] text-secondary mb-4 md:mb-[65px] leading-[1.5]">
+          What Leaders & Readers Are Saying
+        </h1>
+        <div class="t-slider">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-box">
+                    <p class="testimonial-text text-18 font-medium mb-0 text-[#643e19] tracking-[-0.35px] font-sans">
+                      The art of conversation, spiced with management tips that can be used on the shop floor as well as in the boardroom... a delightful and practical read.
+                    </p>
+                  </div>
+                  <div class="testimonial-author">
+                    <p class="text-18 md:text-20 mb-0 font-semibold text-[#643e19] tracking-tight">R. Rajagopal</p>
+                    <span class="text-16">Editor, The Telegraph</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-box">
+                    <p class="testimonial-text text-18 font-medium mb-0 text-[#643e19] tracking-[-0.35px] font-sans">
+                      Short, pithy, witty and meaningful conversations — tiny gems that make Business Gita a thoughtful guide for new-age entrepreneurs.
+                    </p>
+                  </div>
+                  <div class="testimonial-author">
+                    <p class="text-18 md:text-20 mb-0 font-semibold text-[#643e19] tracking-tight">Khaleej Times review</p>
+                    <!-- <span class="text-16">Best Selling Author</span> -->
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-box">
+                    <p class="testimonial-text text-18 font-medium mb-0 text-[#643e19] tracking-[-0.35px] font-sans">
+                      Business Gita is all about crisp, aphoristic, and anecdotal chats that make ancient wisdom accessible and relevant for modern leaders.
+                    </p>
+                  </div>
+                  <div class="testimonial-author">
+                    <p class="text-18 md:text-20 mb-0 font-semibold text-[#643e19] tracking-tight">The Week Magazine</p>
+                    <span class="text-16">On Business Gita 2.0</span>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-box">
+                    <p class="testimonial-text text-18 font-medium mb-0 text-[#643e19] tracking-[-0.35px] font-sans">
+                      A simple yet insightful guide that filters powerful management lessons
+                      from that immortal text, The Srimad Bhagavad-Gita.
+                    </p>
+                  </div>
+                  <div class="testimonial-author">
+                    <p class="text-18 md:text-20 mb-0 font-semibold text-[#643e19] tracking-tight">Ashwin Sanghi</p>
+                    <span class="text-16">Best Selling Author</span>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        
       </div>
     </section>
 
@@ -1607,7 +1822,6 @@
       </div>
       
     </section>
-
     <section class="py-[60px] lg:py-[80px] bg-[#f5efe8]">
         <div class="container">
           <div
@@ -1622,7 +1836,7 @@
             <div class="accordion-block">
               <div class="single-accordion active">
                 <button class="accordion-trigger">
-                  What is Business Gita?
+                  What is Business Gita about?
                   <span class="accordion-marker">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1645,14 +1859,14 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      A leadership book built around short conversations that help leaders think clearly and decide calmly.
+                     Business Gita is a book that translates timeless wisdom into practical insight through short, engaging conversations. It helps readers gain clarity in decision-making, leadership, and life by blending ancient understanding with modern contexts. 
                     </p>
                   </div>
                 </div>
               </div>
               <div class="single-accordion">
                 <button class="accordion-trigger">
-                  Who should read this book?
+                 Who should read this book?
                   <span class="accordion-marker">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1675,14 +1889,14 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      Founders, leaders, managers, and professionals navigating complexity and responsibility.
+                      This book is for everyone — aspiring leaders, professionals, entrepreneurs, thinkers, and lifelong learners — anyone who seeks clarity, confidence, and purposeful action in life or work.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="single-accordion">
                 <button class="accordion-trigger">
-                  Is Business Gita a religious book?
+                  What makes Business Gita different from other leadership books?
                   <span class="accordion-marker">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1705,14 +1919,14 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      No. It draws inspiration from the Bhagavad Gita’s conversational wisdom, applied to modern business.
+                     Unlike traditional leadership books that focus only on frameworks, Business Gita uses conversations to reveal insight, making wisdom relatable, memorable, and immediately applicable. Its lessons are distilled from deep reflection and everyday experience.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="single-accordion">
                 <button class="accordion-trigger">
-                  How is it different from other leadership books?
+                  How many conversations are in the book?
                   <span class="accordion-marker">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1735,14 +1949,14 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      It avoids heavy frameworks and focuses on reflection, clarity, and perspective.
+                      Business Gita 3.0 contains 50 conversations and 50 lessons, each designed to help you think better, decide better, and act with clarity in real situations. If you opt for the collection, they span three volumes — Business Gita 1.0, Business Gita 2.0, and the latest Business Gita 3.0 — each building on the conversational wisdom that has resonated with readers globally.
                     </p>
                   </div>
                 </div>
               </div>
               <div class="single-accordion">
                 <button class="accordion-trigger">
-                  Where can I buy Business Gita?
+                  Can I watch these conversations?
                   <span class="accordion-marker">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -1765,7 +1979,96 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      You can purchase individual editions or the limited combo pack online.
+                      Yes! We’ve brought selected dialogues to life as animated conversation shorts — bite-sized videos that guide, inspire, and provoke thought. You can watch them on our YouTube channel or right here on the website.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="single-accordion">
+                <button class="accordion-trigger">
+                  Who is Dr. Ajayya Kumar?
+                  <span class="accordion-marker">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 9L12 15L18 9"
+                        stroke="#0F1D30"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="accordion-answer">
+                  <div class="answer-wrapper">
+                    <p class="!text-16 !md:text-18">
+                      Dr. Ajayya Kumar is a management thinker, entrepreneur, mentor, TEDx speaker, ethical investor, and storyteller. His work explores the intersection of wisdom and action, helping leaders and learners alike grow with purpose. You can learn more about Dr. Ajayya at <a href="https://beingajay.com/">https://beingajay.com/</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="single-accordion">
+                <button class="accordion-trigger">
+                  How do I stay updated on new conversations and insights?
+                  <span class="accordion-marker">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 9L12 15L18 9"
+                        stroke="#0F1D30"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="accordion-answer">
+                  <div class="answer-wrapper">
+                    <p class="!text-16 !md:text-18">
+                      Stay connected with us for fresh conversations, leadership insights, and community updates by following YouTube, Instagram, and LinkedIn. You can also subscribe to updates here on the website and join our growing Business Gita community.
+                  </div>
+                </div>
+              </div>
+              <div class="single-accordion">
+                <button class="accordion-trigger">
+                  Where can I purchase Business Gita?
+                  <span class="accordion-marker">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 9L12 15L18 9"
+                        stroke="#0F1D30"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="accordion-answer">
+                  <div class="answer-wrapper">
+                    <p class="!text-16 !md:text-18">
+                      You can buy the book directly from this website or through <a href="https://ivorybooks.in/">https://ivorybooks.in/</a> 
                     </p>
                   </div>
                 </div>
@@ -1913,6 +2216,36 @@
         },
       },
     });
+
+      new Swiper(".t-slider .swiper", {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".t-slider .swiper-button-next",
+        prevEl: ".t-slider .swiper-button-prev",
+      },
+      pagination: {
+        el: ".t-slider .swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // mobile
+        0: {
+          slidesPerView: 1,
+        },
+
+        // tablets
+        768: {
+          slidesPerView: 2,
+        },
+
+        // desktop
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+
 
   </script>
   <script src="js/jquery.min.js"></script>
