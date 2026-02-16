@@ -350,13 +350,22 @@
   border-right: 0 solid transparent;
 }
 
+ @media (min-width: 768px) {
+  .testimonial-author {
+   
+    left: 30%;
+    right: 0;
+   
+  }
+ }
+
 .testimonial-author {
   position: absolute;
   margin-top: 10px;
-    white-space: normal;
-    left: 30%;
-    right: 0;
-    height: 60px;
+  white-space: normal;
+  left: 35%;
+  right: 0;
+  height: 60px;
 }
 
 .testimonial-author strong {
@@ -524,14 +533,17 @@
               <div class="flex lg:flex-row flex-col items-center">
                 <div class="w-full lg:w-1/2">
                   <h1
-                    class="max-w-[610px] text-[30px] lg:text-[60px] font-libre font-bold tracking-[-0.6px] leading-[1.1] text-white md:mb-[6px] mb-2">
+                    class="max-w-[610px] text-[30px] lg:text-[60px] font-libre font-bold tracking-[-0.6px] leading-[1.1] text-white md:mb-1 mb-2">
                     Business Gita
                   </h1>
                   <p class="text-[22px] md:text-[30px] font-libre font-medium tracking-[0.8px] leading-[1.25] text-white mb-2">
                     Clarity for Life. <br> Insight for Leadership.
                   </p>
+                  <p class="text-white/80 max-w-[555px] text-16 md:text-18 mb-0">
+                    Your guide to thoughtful action, calm choices, and meaningful growth.
+                  </p>
                   <p class="text-white/80 max-w-[555px] text-16 md:text-18 mb-[12px]">
-                    Your guide to thoughtful action, calm choices, and meaningful growth - whether you lead a team, build a business, or navigate life’s challenges.
+                    Whether you lead a <span class="font-semibold">team, build a business, or navigate life’s challenges</span>.
                   </p>
                  
                   <div class="md:w-fit mt-3 relative">
@@ -542,7 +554,10 @@
                       </p>
                     </a>
                   </div>
-                  <p class="text-[15px] md:text-[18px] text-white mt-[20px] md:mt-[28px]">
+                  <p class="text-[15px] md:text-[18px] text-white/80 mt-[20px] md:mt-[28px] font-semibold block md:hidden" >
+                    50 Conversations &nbsp;|&nbsp; 50 Lessons <br> Timeless insight
+                  </p>
+                  <p class="text-[15px] md:text-[18px] text-white/80 mt-[20px] md:mt-[28px] font-semibold hidden md:block">
                     50 Conversations &nbsp;|&nbsp; 50 Lessons &nbsp;|&nbsp; Timeless insight
                   </p>
                 </div>
@@ -615,7 +630,7 @@
                   </h1> -->
 
                   <p class="text-white/80 max-w-[555px] text-16 md:text-[20px] mt-3 mb-2">
-                   Not just another leadership book — a companion for anyone who wants clearer decisions, deeper insight, and strength in action.
+                   Not just another leadership book. <br> A companion for anyone who wants <span class="font-semibold">clearer decisions, deeper insight</span>, and <span class="font-semibold">strength in action</span>.
                   </p>
                    <h2 class="text-[22px] md:text-[30px] font-libre font-semibold tracking-[0.5px] leading-[1.25] text-white mb-2">
                    When everything feels urgent, <br class="hidden md:block"> clarity wins.
@@ -711,14 +726,18 @@
             <img class="h-full w-full" src="img/crop-back.webp" alt="" />
           </div>
           <div class="relative px-2 md:pl-[80px] md:pr-[32px]">
-            <h2 class="text-white text-[24px] md:text-[36px] leading-[1.25] mb-[30px]">
-              Business Gita - <br>
+            <h2 class="text-white text-[24px] md:text-[36px] leading-[1.25] mb-[24px] md:mb-[30px]">
+              Business Gita <br>
               <i>A Book for Everyone</i> 
             </h2>
             <p class="text-white text-16 md:text-[18px] mb-[16px]">
               Business Gita brings timeless insight into practical, conversational wisdom that resonates with everyday life, work, and leadership.
-              This isn’t just another business book — it’s a companion for anyone who wants clarity in thought, confidence in decision-making, and strength in action. 
-              Whether you’re a leader at work, a creator charting your path, or a thinker seeking depth in everyday choices, this book meets you where you are.
+            <p class="text-white text-16 md:text-[18px] mb-[16px]">
+ This isn’t just another business book it’s a companion for anyone who wants clarity in thought, confidence in decision making, and strength in action. 
+            </p>
+
+             <p class="text-white text-16 md:text-[18px] mb-[16px]">
+ Whether you’re a leader at work, a creator charting your path, or a thinker seeking depth in everyday choices, this book meets you where you are.
             </p>
 
             <p class="text-white text-16 md:text-[18px] md:w-[480px]">
@@ -760,7 +779,7 @@
         <div class="relative md:py-[80px] order-1">
           <div class="relative">
             <h2 class="text-secondary text-[28px] md:text-[40px] mb-[30px]">
-             Why Business Gita was written
+             Why Business Gita was written ?
             </h2>
             <p class="text-secondary text-16 md:text-[18px] mb-[16px]">
               Modern leaders are surrounded by information, yet often deprived of clarity. <br />
@@ -881,7 +900,7 @@
 
     <section class="bg-[#f8e3ca] pt-[60px] md:pt-[100px] relative z-[2]" id="about">
       <div class="container">
-        <h1 class="text-center text-[28px] md:text-[30px] text-secondary mb-[40px] md:mb-[65px] leading-[1.5]">
+        <h1 class="text-center text-[24px] md:text-[30px] text-secondary mb-[40px] md:mb-[65px] leading-[1.5]">
           50 Conversations. <br> 50 Lessons. <br />
           Endless relevance.
         </h1>
@@ -900,10 +919,10 @@
       </div>
     </section>
 
-     <section class="md:pt-[160px] pb-[60px] md:pb-[80px] bg-[#f8e3ca]">
+     <section class="pt-[126px] md:pt-[160px] pb-[60px] md:pb-[80px] bg-[#f8e3ca]">
       <div class="container">
-        <h1 class="text-center text-[30px] text-secondary mb-4 md:mb-[65px] leading-[1.5]">
-          What Leaders & Readers Are Saying
+        <h1 class="text-center text-[24px] md:text-[30px] text-secondary mb-4 md:mb-[65px] leading-[1.5]">
+          What Leaders & <br class="block md:hidden"> Readers Are Saying
         </h1>
         <div class="t-slider">
           <div class="swiper">
@@ -962,8 +981,8 @@
                 </div>
               </div> -->
             </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <!-- <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div> -->
             <div class="swiper-pagination"></div>
           </div>
         </div>
@@ -979,34 +998,38 @@
       <div class="container relative">
         <div class="flex lg:flex-row-reverse gap-4 justify-between flex-col items-center">
           <div class="w-full lg:w-[50%] md:pl-3">
-            <h1 class="font-libre text-[24px] mb-2 text-white">
-              About the Author
+            <!-- <h1 class="font-libre text-[24px] mb-2 text-white">
+             
             </h1>
             <h1
               class="max-w-[610px] text-[28px] lg:text-[40px] font-libre font-bold tracking-[-0.6px] leading-[1.1] text-white mb-[20px]">
-              Dr. Ajayya Kumar
-            </h1>
+             
+            </h1> -->
+            <h2 class="text-white text-[24px] md:text-[36px] leading-[1.25] mb-[24px] md:mb-[30px]">
+              <span class="text-[22px] md:text-[30px]">About the Author</span><br>
+              <i> Dr. Ajayya Kumar</i> 
+            </h2>
             <img src="https://beingajay.com/wp-content/uploads/2023/01/about-us-new.jpg" class="block md:hidden mt-3 mb-2 rounded" alt="">
             <p class="text-18 text-white mb-2">
-             Dr. Ajayya Kumar isn’t just an author — he’s a management thinker, entrepreneur, mentor, TEDx speaker, ethical investor, and creative storyteller whose work inspires leaders and lifelong learners around the world.
+             Dr. Ajayya Kumar isn’t just an author he’s a management thinker, entrepreneur, mentor, TEDx speaker, ethical investor, and creative storyteller whose work inspires leaders and lifelong learners around the world.
             </p>
             <p class="text-white max-w-[555px] text-18 mb-[12px]">
-             From his roots in Kerala, India to his global journey across business, ideas, and human insight, Ajayya has blended ancient wisdom with contemporary perspective, creating a voice that resonates with anyone seeking clarity, purpose, and strength in an ever-changing world.
+             From his roots in Kerala, India to his global journey across business, ideas, and human insight, Ajayya has blended ancient wisdom with contemporary perspective, creating a voice that resonates with anyone seeking clarity, purpose, and strength in an ever changing world.
             </p>
             <p class="text-white max-w-[555px] text-18 mb-[12px]">
-             At the intersection of wisdom and action, Dr. Ajayya Kumar leads with humility, creativity, and a deep belief in people— inspiring others to learn continuously, choose thoughtfully, and act with clarity.
+             At the intersection of wisdom and action, Dr. Ajayya Kumar leads with humility, creativity, and a deep belief in people inspiring others to learn continuously, choose thoughtfully, and act with clarity.
             </p>
             <p class="text-white max-w-[555px] text-18 mb-2">
-             His writings span management, entrepreneurship, culture, and personal growth — with Business Gita emerging as a book that turns everyday conversations into powerful lessons for life and work.
+             His writings span management, entrepreneurship, culture, and personal growth with Business Gita emerging as a book that turns everyday conversations into powerful lessons for life and work.
             </p>
-            <p class="text-white max-w-[555px] text-18 mb-2 italic relative">
-             “I believe leadership starts with understanding oneself - patience, clarity, and purpose are the real differentiators.” <br>
+            <p class="text-white max-w-[555px] text-18 mb-4 italic relative">
+             “I believe leadership starts with understanding oneself patience, clarity, and purpose are the real differentiators.” <br>
              <span class="mr-auto absolute text-[15px] right-0">- Dr. Ajayya Kumar</span>
             </p>
-            <div class="w-fit mr-auto mt-3 mb-6 md:mb-4">
+            <div class="w-fit mr-auto mt-6 mb-6 md:mb-4">
               <a href="https://beingajay.com/about-me/"
-                class="button relative py-[12px] w-full inline-block text-white font-semibold text-16 leading-none md:w-fit hover:translate-x-1">
-                <p class="mb-0 flex items-center text-white">
+                class="button relative py-[12px] px-[30px] md:px-[40px] bg-aorange w-full inline-block text-secondary font-semibold text-16 leading-none md:w-fit hover:translate-x-1">
+                <p class="mb-0 flex items-center text-secondary">
                  Read more about the author →
                 </p>
               </a>
@@ -1098,9 +1121,12 @@
       </div>
     </section> -->
     <section class="py-[60px]">
-      <h1 class="text-center text-[30px] text-secondary mb-4 md:mb-[65px] leading-[1.5]">
-          Featured Conversation Shorts
-        </h1>
+      <h1 class="text-center text-[30px] text-secondary mb-1 leading-[1.5]">
+          Short dialogues. Lasting impact.
+      </h1>
+      <p class=" text-secondary text-20 mb-4 md:mb-[65px] px-1 text-center">
+        Perfect for leaders, thinkers, creators, and curious minds.
+      </p>
       <div class="max-w-[95%] mx-auto">
         <div class="course-slider">
           <div class="swiper">
@@ -1871,7 +1897,7 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                     Business Gita is a book that translates timeless wisdom into practical insight through short, engaging conversations. It helps readers gain clarity in decision-making, leadership, and life by blending ancient understanding with modern contexts. 
+                     Business Gita is a book that translates timeless wisdom into practical insight through short, engaging conversations. It helps readers gain clarity in decision making, leadership, and life by blending ancient understanding with modern contexts. 
                     </p>
                   </div>
                 </div>
@@ -1901,7 +1927,7 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      This book is for everyone — aspiring leaders, professionals, entrepreneurs, thinkers, and lifelong learners — anyone who seeks clarity, confidence, and purposeful action in life or work.
+                      This book is for everyone aspiring leaders, professionals, entrepreneurs, thinkers, and lifelong learners anyone who seeks clarity, confidence, and purposeful action in life or work.
                     </p>
                   </div>
                 </div>
@@ -1961,7 +1987,7 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      Business Gita 3.0 contains 50 conversations and 50 lessons, each designed to help you think better, decide better, and act with clarity in real situations. If you opt for the collection, they span three volumes — Business Gita 1.0, Business Gita 2.0, and the latest Business Gita 3.0 — each building on the conversational wisdom that has resonated with readers globally.
+                      <span class="font-medium">Business Gita 3.0 </span>contains 50 conversations and 50 lessons, each designed to help you think better, decide better, and act with clarity in real situations. If you opt for the collection, they span three volumes <span class="font-medium">Business Gita 1.0, Business Gita 2.0, and the latest Business Gita 3.0</span> each building on the conversational wisdom that has resonated with readers globally.
                     </p>
                   </div>
                 </div>
@@ -1991,7 +2017,7 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      Yes! We’ve brought selected dialogues to life as animated conversation shorts — bite-sized videos that guide, inspire, and provoke thought. You can watch them on our YouTube channel or right here on the website.
+                      Yes! We’ve brought selected dialogues to life as animated conversation shorts bite-sized videos that guide, inspire, and provoke thought. You can watch them on our YouTube channel or right here on the website.
                     </p>
                   </div>
                 </div>
@@ -2021,7 +2047,7 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      Dr. Ajayya Kumar is a management thinker, entrepreneur, mentor, TEDx speaker, ethical investor, and storyteller. His work explores the intersection of wisdom and action, helping leaders and learners alike grow with purpose. You can learn more about Dr. Ajayya at <a href="https://beingajay.com/">https://beingajay.com/</a>
+                      <span class="font-semibold">Dr. Ajayya Kumar</span> is a management thinker, entrepreneur, mentor, TEDx speaker, ethical investor, and storyteller. His work explores the intersection of wisdom and action, helping leaders and learners alike grow with purpose. You can learn more about Dr. Ajayya at <a class="font-semibold" href="https://beingajay.com/">https://beingajay.com/</a>
                     </p>
                   </div>
                 </div>
@@ -2080,7 +2106,7 @@
                 <div class="accordion-answer">
                   <div class="answer-wrapper">
                     <p class="!text-16 !md:text-18">
-                      You can buy the book directly from this website or through <a href="https://ivorybooks.in/">https://ivorybooks.in/</a> 
+                      You can buy the book directly from this website or through <a class="font-semibold" href="https://ivorybooks.in/">https://ivorybooks.in/</a> 
                     </p>
                   </div>
                 </div>
