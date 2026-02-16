@@ -634,10 +634,6 @@ video {
   grid-column: span 2 / span 2;
 }
 
-.m-2 {
-  margin: 16px;
-}
-
 .-mx-2 {
   margin-left: -16px;
   margin-right: -16px;
@@ -646,6 +642,11 @@ video {
 .mx-\[-0\.5px\] {
   margin-left: -0.5px;
   margin-right: -0.5px;
+}
+
+.mx-\[16px\] {
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .mx-auto {
@@ -658,31 +659,6 @@ video {
   margin-bottom: 24px;
 }
 
-.mx-2 {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-.mx-\[3\] {
-  margin-left: 3;
-  margin-right: 3;
-}
-
-.mx-3 {
-  margin-left: 24px;
-  margin-right: 24px;
-}
-
-.mx-\[20px\] {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.mx-\[16px\] {
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -693,6 +669,10 @@ video {
 
 .mb-2 {
   margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
 }
 
 .mb-4 {
@@ -729,10 +709,6 @@ video {
 
 .mb-\[40px\] {
   margin-bottom: 40px;
-}
-
-.mb-\[50px\] {
-  margin-bottom: 50px;
 }
 
 .mb-\[6px\] {
@@ -777,14 +753,6 @@ video {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mb-3 {
-  margin-bottom: 24px;
-}
-
-.ml-auto {
-  margin-left: auto;
 }
 
 .block {
@@ -851,6 +819,10 @@ video {
   width: 20px;
 }
 
+.w-\[80\%\] {
+  width: 80%;
+}
+
 .w-\[90\%\] {
   width: 90%;
 }
@@ -862,18 +834,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[95\%\] {
-  width: 95%;
-}
-
-.w-\[80\%\] {
-  width: 80%;
 }
 
 .min-w-full {
@@ -962,6 +922,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-3 {
+  gap: 24px;
+}
+
 .gap-4 {
   gap: 32px;
 }
@@ -982,10 +946,6 @@ video {
   gap: 40px;
 }
 
-.gap-3 {
-  gap: 24px;
-}
-
 .gap-y-2 {
   row-gap: 16px;
 }
@@ -1002,20 +962,12 @@ video {
   border-radius: 0.25rem;
 }
 
-.rounded-\[47px\] {
-  border-radius: 47px;
-}
-
 .rounded-\[50px\] {
   border-radius: 50px;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
 }
 
 .rounded-bl-\[2px\] {
@@ -1099,11 +1051,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-secondary {
-  --tw-bg-opacity: 1;
-  background-color: rgb(68 44 34 / var(--tw-bg-opacity, 1));
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1179,34 +1126,14 @@ video {
   padding-bottom: 40px;
 }
 
-.py-\[60px\] {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-.py-\[80px\] {
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.py-\[0px\] {
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
 .py-\[50px\] {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.py-\[20px\] {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.py-\[60px\] {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .pb-2 {
@@ -1221,8 +1148,8 @@ video {
   padding-bottom: 64px;
 }
 
-.pb-\[60px\] {
-  padding-bottom: 60px;
+.pb-\[80px\] {
+  padding-bottom: 80px;
 }
 
 .pt-2 {
@@ -1245,36 +1172,12 @@ video {
   padding-top: 20px;
 }
 
-.pt-\[60px\] {
-  padding-top: 60px;
-}
-
-.pt-\[\] {
-  padding-top: ;
-}
-
-.pt-\[80px\] {
-  padding-top: 80px;
-}
-
-.pl-2 {
-  padding-left: 16px;
-}
-
 .pt-\[40px\] {
   padding-top: 40px;
 }
 
-.pb-\[30px\] {
-  padding-bottom: 30px;
-}
-
-.pb-\[40px\] {
-  padding-bottom: 40px;
-}
-
-.pb-\[80px\] {
-  padding-bottom: 80px;
+.pt-\[60px\] {
+  padding-top: 60px;
 }
 
 .text-left {
@@ -1353,10 +1256,6 @@ video {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-}
-
-.text-\[2px\] {
-  font-size: 2px;
 }
 
 .font-bold {
@@ -1455,22 +1354,8 @@ video {
   color: rgb(255 255 255 / 0.8);
 }
 
-.text-\[\] {
-  color: ;
-}
-
-.text-\[2\] {
-  color: 2;
-}
-
 .opacity-80 {
   opacity: 0.8;
-}
-
-.shadow {
-  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .blur {
@@ -3026,11 +2911,6 @@ table th:last-child {
     order: 1;
   }
 
-  .md\:mx-2 {
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -3056,12 +2936,12 @@ table th:last-child {
     margin-bottom: 65px;
   }
 
-  .md\:mt-\[28px\] {
-    margin-top: 28px;
-  }
-
   .md\:mt-0 {
     margin-top: 0px;
+  }
+
+  .md\:mt-\[28px\] {
+    margin-top: 28px;
   }
 
   .md\:block {
@@ -3089,10 +2969,6 @@ table th:last-child {
     width: fit-content;
   }
 
-  .md\:w-\[\] {
-    width: ;
-  }
-
   .md\:max-w-\[520px\] {
     max-width: 520px;
   }
@@ -3117,16 +2993,12 @@ table th:last-child {
     justify-content: space-around;
   }
 
-  .md\:gap-5 {
-    gap: 48px;
-  }
-
   .md\:gap-0 {
     gap: 0px;
   }
 
-  .md\:gap-2 {
-    gap: 16px;
+  .md\:gap-5 {
+    gap: 48px;
   }
 
   .md\:rounded-none {
@@ -3136,6 +3008,11 @@ table th:last-child {
   .md\:px-\[40px\] {
     padding-left: 40px;
     padding-right: 40px;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:py-2 {
@@ -3153,21 +3030,17 @@ table th:last-child {
     padding-bottom: 80px;
   }
 
-  .md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
+  .md\:py-\[90px\] {
+    padding-top: 90px;
+    padding-bottom: 90px;
   }
 
-  .md\:pb-\[80px\] {
-    padding-bottom: 80px;
+  .md\:pb-\[140px\] {
+    padding-bottom: 140px;
   }
 
   .md\:pl-3 {
     padding-left: 24px;
-  }
-
-  .md\:pl-\[20px\] {
-    padding-left: 20px;
   }
 
   .md\:pl-\[80px\] {
@@ -3188,26 +3061,6 @@ table th:last-child {
 
   .md\:pt-\[40px\] {
     padding-top: 40px;
-  }
-
-  .md\:pb-\[60px\] {
-    padding-bottom: 60px;
-  }
-
-  .md\:pb-\[0px\] {
-    padding-bottom: 0px;
-  }
-
-  .md\:pb-\[70px\] {
-    padding-bottom: 70px;
-  }
-
-  .md\:pb-\[120px\] {
-    padding-bottom: 120px;
-  }
-
-  .md\:pb-\[140px\] {
-    padding-bottom: 140px;
   }
 
   .md\:text-left {
@@ -3246,10 +3099,6 @@ table th:last-child {
     font-size: 36px;
   }
 
-  .md\:text-\[40px\] {
-    font-size: 40px;
-  }
-
   .md\:leading-\[1\.1\] {
     line-height: 1.1;
   }
@@ -3274,22 +3123,6 @@ table th:last-child {
 
   .lg\:w-\[50\%\] {
     width: 50%;
-  }
-
-  .lg\:w-\[\] {
-    width: ;
-  }
-
-  .lg\:w-\[50\] {
-    width: 50;
-  }
-
-  .lg\:w-\[35\%\] {
-    width: 35%;
-  }
-
-  .lg\:w-\[30\%\] {
-    width: 30%;
   }
 
   .lg\:min-w-\[160px\] {
@@ -3328,10 +3161,6 @@ table th:last-child {
 
   .lg\:pt-\[180px\] {
     padding-top: 180px;
-  }
-
-  .lg\:pt-\[80px\] {
-    padding-top: 80px;
   }
 
   .lg\:pt-\[60px\] {
