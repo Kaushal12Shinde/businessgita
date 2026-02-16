@@ -674,10 +674,6 @@ video {
   margin-bottom: 32px;
 }
 
-.mb-6 {
-  margin-bottom: 64px;
-}
-
 .mb-\[-80px\] {
   margin-bottom: -80px;
 }
@@ -782,6 +778,10 @@ video {
   display: none;
 }
 
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
 .h-\[200px\] {
   height: 200px;
 }
@@ -790,16 +790,12 @@ video {
   height: 300px;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .h-\[80vh\] {
   height: 80vh;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .min-h-full {
@@ -1036,10 +1032,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
-.bg-\[\] {
-  background-color: ;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1048,6 +1040,11 @@ video {
 .object-center {
   -o-object-position: center;
      object-position: center;
+}
+
+.object-top {
+  -o-object-position: top;
+     object-position: top;
 }
 
 .px-1 {
@@ -1088,11 +1085,6 @@ video {
 .py-1 {
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-.py-\[100px\] {
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 
 .py-\[12px\] {
@@ -1169,32 +1161,12 @@ video {
   padding-top: 30px;
 }
 
-.pt-\[40px\] {
-  padding-top: 40px;
-}
-
 .pt-\[50px\] {
   padding-top: 50px;
 }
 
 .pt-\[60px\] {
   padding-top: 60px;
-}
-
-.pt-\[10px\] {
-  padding-top: 10px;
-}
-
-.pt-\[130px\] {
-  padding-top: 130px;
-}
-
-.pt-\[140px\] {
-  padding-top: 140px;
-}
-
-.pb-\[\] {
-  padding-bottom: ;
 }
 
 .text-left {
@@ -1273,10 +1245,6 @@ video {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
-}
-
-.text-\[32px\] {
-  font-size: 32px;
 }
 
 .font-bold {
@@ -3103,16 +3071,16 @@ table th:last-child {
     font-size: 22px;
   }
 
+  .md\:text-\[28px\] {
+    font-size: 28px;
+  }
+
   .md\:text-\[30px\] {
     font-size: 30px;
   }
 
   .md\:text-\[36px\] {
     font-size: 36px;
-  }
-
-  .md\:text-\[28px\] {
-    font-size: 28px;
   }
 
   .md\:leading-\[1\.1\] {
@@ -3170,6 +3138,11 @@ table th:last-child {
     padding-right: 32px;
   }
 
+  .lg\:py-\[60px\] {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   .lg\:pb-\[160px\] {
     padding-bottom: 160px;
   }
@@ -3180,10 +3153,6 @@ table th:last-child {
 
   .lg\:pt-\[180px\] {
     padding-top: 180px;
-  }
-
-  .lg\:pt-\[60px\] {
-    padding-top: 60px;
   }
 
   .lg\:text-\[30px\] {
