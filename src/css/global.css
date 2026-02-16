@@ -394,9 +394,7 @@
     border-radius: 30px
 }
 
-.nav-main .nav-wrapper a:not(.button):hover {
-    color: rgba(36, 90, 236, .8)
-}
+/* s */
 
 @media(max-width: 1024px) {
     .nav-main .hamburger {
