@@ -819,7 +819,7 @@ button:disabled {
 }
 
 .single-accordion {
-    border: 1px solid rgba(15, 29, 48, .1);
+    border: 1px solid #432b1f;
     margin-bottom: 24px;
     padding: 24px 32px;
     border-radius: 16px
@@ -866,7 +866,7 @@ button:disabled {
 
 .single-accordion.active .accordion-answer {
     grid-template-rows: 1fr;
-    padding-top: 24px;
+    padding-top: 18px;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px
 }
@@ -883,15 +883,15 @@ button:disabled {
 }
 
 .single-accordion .accordion-answer .answer-wrapper p {
-    font-size: 14px;
-    color: rgba(50, 40, 26, .7);
+    font-size: 16px;
+    color: rgba(50, 40, 26);
     line-height: 24px;
     margin-bottom: 0
 }
 
 @media(max-width: 767px) {
     .single-accordion .accordion-answer .answer-wrapper p {
-        font-size: 14px
+        font-size: 18px;
     }
 }
 
