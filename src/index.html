@@ -518,7 +518,22 @@
     <section class="hero-slider relative overflow-hidden">
       <div class="swiper heroSwiper">
         <div class="swiper-wrapper">
-          
+          <div class="swiper-slide relative">
+             <video
+              id="heroVideo"
+              src="img/hero-vidoe.mp4" autoplay
+              class="w-full h-full object-cover cursor-pointer hidden md:block hero-video"
+              playsinline
+              loop
+            ></video>
+            <video
+              id="heroVideo"
+              src="img/bs-m.mp4" autoplay
+              class="w-full h-full object-cover cursor-pointer md:hidden hero-video"
+              playsinline
+              loop
+            ></video>
+          </div>
           <div class="swiper-slide relative">
             <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
               <div class="overlay"></div>
@@ -650,16 +665,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide relative hidden md:block">
-             <video
-              id="heroVideo"
-              src="img/hero-vidoe.mp4" autoplay
-              class="w-full h-full object-cover cursor-pointer"
-              playsinline
-              loop
-              
-            ></video>
-          </div>
+          
         </div>
 
         <!-- Bottom navigation -->
@@ -2264,22 +2270,27 @@
   </main>
   <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("heroVideo");
+    const videos = document.querySelectorAll(".hero-video");
 
-    video.muted = true; // force mute again (important)
-    video.play().catch(err => {
-      console.log("Autoplay blocked:", err);
-    });
+    videos.forEach(video => {
+      // Force mute for autoplay
+      video.muted = true;
 
-    video.muted = true;
+      video.play().catch(err => {
+        console.log("Autoplay blocked:", err);
+      });
 
-    video.addEventListener("click", () => {
-      if (video.muted) {
-        video.muted = false;
-      }
-      video.paused ? video.play() : video.pause();
+      // Click to toggle play/pause + unmute
+      video.addEventListener("click", () => {
+        if (video.muted) {
+          video.muted = false;
+        }
+
+        video.paused ? video.play() : video.pause();
+      });
     });
   });
+
 </script>
 
 
