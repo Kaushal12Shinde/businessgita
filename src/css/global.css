@@ -401,6 +401,7 @@
         display: flex
     }
 
+
     .nav-main .nav-wrapper {
         position: fixed;
         max-width: 500px;
@@ -408,7 +409,7 @@
         right: 0;
         top: 0;
         bottom: 0;
-        background-color: #091135;
+        inset: 0;           
         z-index: 99;
         flex-direction: column;
         text-align: left;
@@ -417,6 +418,29 @@
         opacity: 0;
         visibility: hidden;
         transition: .4s ease-out
+    }
+
+    
+    .nav-main .nav-wrapper::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('./../img/crop-back.webp');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -2;
+    }
+
+    .nav-main .nav-wrapper::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #000000;
+        background: linear-gradient(90deg,
+        rgba(0, 0, 0, 0.7) 8%,
+        rgba(255, 255, 255, 0) 100%);
+        z-index: -1;
     }
 
     .nav-main .nav-wrapper>div {
@@ -1463,3 +1487,30 @@ table th:last-child {
         top: 4px
     }
 }
+
+.backage{
+        position: relative;
+        z-index: 0;
+    }
+
+    .backage::before{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('./../img/crop-back.webp');
+        background-size:cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+
+    .backage::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #000000;
+        background: linear-gradient(90deg,
+        rgba(0, 0, 0, 0.7) 8%,
+        rgba(255, 255, 255, 0) 100%);
+        z-index: 2;
+    }
