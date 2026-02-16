@@ -980,6 +980,10 @@ video {
   margin-bottom: 65px;
 }
 
+.mb-\[px\] {
+  margin-bottom: px;
+}
+
 .block {
   display: block;
 }
@@ -1740,6 +1744,16 @@ video {
   padding-bottom: 120px;
 }
 
+.py-\[\] {
+  padding-top: ;
+  padding-bottom: ;
+}
+
+.py-\[180px\] {
+  padding-top: 180px;
+  padding-bottom: 180px;
+}
+
 .pb-3 {
   padding-bottom: 24px;
 }
@@ -2153,6 +2167,10 @@ video {
 
 .text-\[\] {
   color: ;
+}
+
+.text-\[2\] {
+  color: 2;
 }
 
 .line-through {
@@ -4087,6 +4105,10 @@ table th:last-child {
     flex-direction: row;
   }
 
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
   .lg\:items-center {
     align-items: center;
   }
@@ -4237,6 +4259,10 @@ table th:last-child {
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
+  }
+
+  .lg\:text-\[40px\] {
+    font-size: 40px;
   }
 
   .lg\:leading-\[1\.5\] {
