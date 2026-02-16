@@ -308,19 +308,12 @@
                   <a class="nav-link text-white" href="">Home</a>
                 </div>
                 <div>
-                  <a class="nav-link text-white" href="#course">About</a>
+                  <a class="nav-link text-white" href="#about">About</a>
                 </div>
-                <!-- <div>
-                    <a class="nav-link text-white" href="#testimonials"
-                      >Testimonials</a
-                    >
-                  </div>
-                  <div>
-                    <a class="nav-link text-white" href="#contact">Contact</a>
-                  </div>
-                  <div>
-                    <a class="nav-link text-white" href="#blogs">Blogs</a>
-                  </div> -->
+                <div>
+                  <a class="nav-link text-white" href="#author">Author</a>
+                </div>
+               
                 <div class="mt-auto">
                   <a href="#!"
                     class="button rounded-[47px] py-[12px] px-[34px] bg-aorange w-full lg:min-w-[160px] inline-block text-16 leading-[1.5] font-semibold">
@@ -346,6 +339,16 @@
     <section class="hero-slider relative">
       <div class="swiper heroSwiper">
         <div class="swiper-wrapper">
+          <div class="swiper-slide relative">
+             <video
+              id="heroVideo"
+              src="img/hero-vidoe.mp4" autoplay
+              class="w-full h-full object-cover cursor-pointer"
+              playsinline
+              loop
+              
+            ></video>
+          </div>
           <div class="swiper-slide relative">
             <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
               <div class="overlay"></div>
@@ -394,7 +397,7 @@
             </div>
           </div>
 
-          <div class="swiper-slide relative">
+          <!-- <div class="swiper-slide relative">
             <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
               <div class="overlay"></div>
               <img class="h-full w-full object-cover" src="img/hero-3.png" alt="" />
@@ -414,10 +417,7 @@
                     Dialogue-led lessons you'll revisit-without heavy
                     frameworks.
                   </p>
-                  <!-- <p class="text-white/80 max-w-[545px] text-18 mb-1">
-                    Inspired by the conversational wisdom of the Bhagavad Gita written for the realities of modern
-                    business.
-                  </p> -->
+
 
                   <div class="w-fit mt-4 relative">
                     <a href="#!"
@@ -432,12 +432,12 @@
                 </div>
                 <div class="w-full lg:w-1/2">
                   <div class="md:max-w-[520px] lg:ml-auto">
-                    <!-- <img class="w-full" src="img/exhibitionist/hero-img.webp" alt="" /> -->
+              
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
 
           <div class="swiper-slide relative">
             <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
@@ -701,7 +701,7 @@
       </div>
     </section>
 
-    <section class="bg-[#f8e3ca] pt-[100px] relative z-[2]">
+    <section class="bg-[#f8e3ca] pt-[100px] relative z-[2]" id="about">
       <div class="container">
         <h1 class="text-center text-[30px] text-secondary mb-[65px] leading-[1.5]">
           50 Conversations. 50 Lessons. <br />
@@ -722,7 +722,7 @@
       </div>
     </section>
 
-    <section class="pt-[150px] lg:pt-[180px] relative">
+    <section class="pt-[150px] lg:pt-[180px] relative" id="author">
       <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
         <div class="overlay-1"></div>
         <!-- <img class="h-full w-full object-cover" src="img/Author.webp" alt="" /> -->
@@ -767,6 +767,14 @@
               He writes for leaders who value clarity over noise, and depth
               over speed.
             </p>
+            <div class="w-fit ml-auto mt-2">
+              <a href="https://beingajay.com/about-me/"
+                class="button relative py-[12px] px-[40px] lg:px-[32px] w-full bg-sandal inline-block text-black font-semibold text-16 leading-none w-fit">
+                <p class="mb-0 flex items-center">
+                 Know more
+                </p>
+              </a>
+            </div>
           </div>
           <div class="w-full lg:w-[40%]">
             <div class="">
@@ -777,7 +785,7 @@
       </div>
     </section>
     
-    <section class="overflow-hidden relative">
+    <section class="overflow-hidden relative" id="social">
       <div>
         <div class="flex">
           <div
@@ -1584,7 +1592,7 @@
       
     </section>
 
-    <section class="py-[80px] relative">
+    <section class="py-[80px] relative" id="footer">
       <div class="absolute top-0 left-0 right-0 bottom-0 h-full w-full">
         <div class="overlay"></div>
         <img class="h-full w-full" src="img/crop-back.webp" alt="" />
@@ -1622,18 +1630,26 @@
 
     <section>
       <div class="side-tabs">
-        <div class="tab-bar">
-          <div class="tab"><span>About</span></div>
-        </div>
-        <div class="tab-bar">
-          <div class="tab"><span>Careers</span></div>
-        </div>
-        <div class="tab-bar">
-          <div class="tab"><span>Testimonials</span></div>
-        </div>
-        <div class="tab-bar">
-          <div class="tab"><span>Products</span></div>
-        </div>
+        <a href="#about" class="nav-link">
+          <div class="tab-bar">
+            <div class="tab"><span>About</span></div>
+          </div>
+        </a>
+        <a href="#author" class="nav-link">
+          <div class="tab-bar">
+            <div class="tab"><span>Author</span></div>
+          </div>
+        </a>
+         <a href="#social" class="nav-link">
+           <div class="tab-bar">
+             <div class="tab"><span>Social Media</span></div>
+           </div>
+         </a>
+         <a href="#footer" class="nav-link">
+           <div class="tab-bar">
+             <div class="tab"><span>Footer</span></div>
+           </div>
+         </a>
       </div>
     </section>
 
@@ -1650,15 +1666,33 @@
       </section>
     </footer>
   </main>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("heroVideo");
+
+    video.muted = true; // force mute again (important)
+    video.play().catch(err => {
+      console.log("Autoplay blocked:", err);
+    });
+
+    video.muted = true;
+
+    video.addEventListener("click", () => {
+      if (video.muted) {
+        video.muted = false;
+      }
+      video.paused ? video.play() : video.pause();
+    });
+  });
+</script>
+
+
+
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     new Swiper(".heroSwiper", {
       loop: true,
       speed: 1000,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
