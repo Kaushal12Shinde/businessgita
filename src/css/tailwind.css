@@ -1160,6 +1160,10 @@ video {
   padding-top: 60px;
 }
 
+.pt-\[90px\] {
+  padding-top: 90px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -3462,6 +3466,10 @@ table th:last-child {
 
   .md\:pt-\[80px\] {
     padding-top: 80px;
+  }
+
+  .md\:pt-\[120px\] {
+    padding-top: 120px;
   }
 
   .md\:text-left {
