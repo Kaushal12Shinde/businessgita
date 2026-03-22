@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{shtml,html,js}"],
+  content: [
+    "./*.html",              // root HTML files ✅
+    "./src/**/*.{js,html}"  // JS + any HTML inside src ✅
+  ],
   theme: {
     container: {
       center: true,
