@@ -1739,7 +1739,7 @@ table th:last-child {
 
   .course-slider .swiper-slide {
     overflow: hidden;
-    height: 450px;
+    height: 580px;
     /* 👈 Important to prevent infinite vertical scrolling */
   }
 
